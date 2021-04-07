@@ -39,7 +39,7 @@ function draw() {
 
 
 
-  if (emit) {
+  if (mouseIsPressed) {
     for (let i = 0; i < 3; i++) {
       particles.push(new Particle(mouseX, mouseY));
     }
