@@ -14,7 +14,7 @@ class Particle {
     this.vel.setMag(random(0.5, random(2, 5)));
     this.acc = createVector(0, 0);
     this.r = 4; this.d = this.r * 2;
-    this.oval = 0.00;
+    this.oval = random(this.d - (this.d / 5), this.d);
     this.red = Math.round(random(0, 255));
     this.green = Math.round(random(0, 255));
     this.blue = Math.round(random(0, 255));
@@ -57,7 +57,6 @@ class Particle {
     stroke(this.red, this.green, this.blue, this.alpha);
     strokeWeight(1);
     fill(this.red, this.green, this.blue, this.lifetime, this.alpha);
-    this.oval = random(this.d - (this.d / 5), this.d);
     ellipse(this.pos.x, this.pos.y, this.oval, this.oval);
   }
 }
